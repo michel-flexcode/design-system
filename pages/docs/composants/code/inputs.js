@@ -3,6 +3,11 @@ export const inputText = `<InputsGroup class="max-w-xs">
     <InputsTexte name="nom" placeholder="Votre nom" />
 </InputsGroup>`;
 
+export const inputNumber = `<InputsGroup class="max-w-xs">
+    <InputsLabel name="age">Age</InputsLabel>
+    <InputsNumber v-model="age" name="age" placeholder="Votre age" />
+</InputsGroup>`;
+
 export const inputTextWithError = `<InputsGroup class="max-w-xs">
     <InputsLabel name="nom">Nom</InputsLabel>
     <InputsTexte name="nom" placeholder="Votre nom" />

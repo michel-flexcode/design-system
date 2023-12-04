@@ -1,5 +1,11 @@
 <script setup>
-import { form, inputText, inputTextWithError, textarea } from "./code/inputs";
+import {
+  form,
+  inputText,
+  inputTextWithError,
+  textarea,
+  inputNumber,
+} from "./code/inputs";
 
 definePageMeta({
   layout: "docs",
@@ -8,6 +14,7 @@ definePageMeta({
 const nom = ref("");
 const prenom = ref("");
 const description = ref("");
+const age = ref(0);
 </script>
 
 <template>
@@ -28,6 +35,21 @@ const description = ref("");
     <div class="mt-1">Valeur du champs: "{{ nom }}"</div>
 
     <TextesCode :code="inputText" />
+
+    <TextesParagraphe>
+      Vous pouvez utilisez les inputs de formulaire dans vos projets.
+    </TextesParagraphe>
+
+    <TitresH2>Input de nUMBER</TitresH2>
+
+    <InputsGroup class="max-w-xs">
+      <InputsLabel name="age">Age</InputsLabel>
+      <InputsNumber v-model="age" name="age" placeholder="Votre age" />
+    </InputsGroup>
+
+    <div class="mt-1">Valeur du champs: "{{ age }}"</div>
+
+    <TextesCode :code="inputNumber" />
 
     <TitresH2>Input de texte avec erreur</TitresH2>
 
