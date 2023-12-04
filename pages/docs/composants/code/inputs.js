@@ -8,6 +8,11 @@ export const inputNumber = `<InputsGroup class="max-w-xs">
     <InputsNumber v-model="age" name="age" placeholder="Votre age" />
 </InputsGroup>`;
 
+export const inputCheckbox = `<InputsGroup class="max-w-xs">
+    <InputsLabel name="checkbox">Checkboux</InputsLabel>
+    <InputsCheckbox v-model="checkbox" name="checkbox"placeholder="Votre choixbox"/>
+</InputsGroup>`;
+
 export const inputTextWithError = `<InputsGroup class="max-w-xs">
     <InputsLabel name="nom">Nom</InputsLabel>
     <InputsTexte name="nom" placeholder="Votre nom" />

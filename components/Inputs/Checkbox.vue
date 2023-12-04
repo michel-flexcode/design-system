@@ -1,14 +1,28 @@
-  <template>
-    <div class="flex items-center">
-      <label class="block text-white text-sm font-bold mb-2">
-        <slot name="label"></slot>
-      </label>
-        <input
-          type="checkbox"
-          class="form-input border border-gray-300 p-2 rounded-md text-sm focus:outline-none focus:border-indigo-500"
-        />
-        <p class="text-white text-base ml-2">
-          <slot />
-        </p>   
-    </div>
-  </template>
+<script setup>
+defineProps({
+  modelValue: {
+    type: Checkbox,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+});
+const emit = defineEmits(["update:modelValue"]);
+
+const handleChange = (event) => {
+  emit("update:modelValue", event.target.value);
+};
+</script>
+
+<template>
+  <input
+    type="checkbox"
+    :name="name"
+    :id="name"
+    :value="modelValue"
+    @input="handleChange"
+    class="ring-2 ring-gray-200/75 focus:ring-gray-100 focus:outline-none focus:ring-2 px-4 py-2 w-full bg-black/50 text-gray-100"
+  />
+</template>
