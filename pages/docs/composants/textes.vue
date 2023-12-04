@@ -10,7 +10,7 @@ const code = `<TextesCode code="${consoleLog}" language="js" />`;
 <template>
   <Container>
     <TitresH1>Textes</TitresH1>
-
+    <TextesCitation>Un site by Cecere Michel</TextesCitation>
     <TextesParagraphe>
       Utilisez les composants de texte pour afficher des paragraphes ou des
       blocks de code, etc.
