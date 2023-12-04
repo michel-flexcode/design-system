@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   modelValue: {
-    type: Checkbox,
+    type: Boolean,
     required: true,
   },
   name: {
