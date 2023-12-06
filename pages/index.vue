@@ -36,6 +36,15 @@
           Icones
         </CardsIconCard>
       </li>
+
+      <li>
+        <CardsUserCard to="/docs/users">
+          <template #iconUser>
+            <i class="ri-heart-line text-red-500 group-hover:text-red-700"></i>
+          </template>
+          Users
+        </CardsUserCard>
+      </li>
     </ListsGrid>
   </Container>
 </template>
